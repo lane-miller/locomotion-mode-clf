@@ -5,4 +5,5 @@ matplotlib
 torch
 jupyter
 jupyterlab
+ipympl
 #pymatreader # used for Camargo dataset
