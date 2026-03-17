@@ -2,34 +2,33 @@
 
 ## Dataset
 
-**Camargo et al. (2021)** — open-source lower-limb biomechanics and wearable 
-sensor data from 22 able-bodied adults across multiple locomotion modes and 
-terrain conditions.
+**PAMAP2 Physical Activity Monitoring** — wearable IMU data from 9 subjects 
+performing a range of physical activities, collected at Universität Passau.
 
-- 15 of 22 subjects used in this project (AB06 - AB20)
-- IMU sampling rate: 200Hz
-- Sensors used: `imu` and `conditions` folders only
+- 9 subjects, 18 activities (subset used here)
+- IMU sensors: wrist, chest, ankle (accelerometer, gyroscope, magnetometer)
+- IMU sampling rate: 100Hz
+- Format: plain-text CSV, pandas-compatible
 
 ## Source
 
-EPIC Lab at Georgia Tech:
-http://www.epic.gatech.edu/opensource-biomechanics-camargo-et-al
+UCI Machine Learning Repo:
+https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring
 
 ## Local Storage
 
-Data is stored on an external SSD, not committed to this repository!
+Data is stored on external SSD, not committed to this repo
 
-Local path: `<SSD>/Datasets/Bio/Camargo_2021/`
+Local path: `<SSD>/Datasets/Bio/PAMAP2/`
 
-Original dataset directory structure:
-```
-<SubjectID>/<Date>/<Mode>/<Sensor>/
-```
+## Note on Camargo et al.
+
+Originally intended to use the Camargo et al. (2021) lower-limb 
+biomechanics dataset, which stores sensor data as MATLAB table objects 
+incompatible with Python-based loading libraries. PAMAP2 is compatible alternative
 
 ## Citation
 
-Camargo J, Ramanathan A, Flanagan W, Young A. *A comprehensive, open-source
-dataset of lower limb biomechanics in multiple conditions of stairs, ramps,
-and level-ground ambulation and transitions.* Journal of Biomechanics, 2021.
-https://doi.org/10.1016/j.jbiomech.2021.110320
-```
+Reiss, A. (2012). PAMAP2 Physical Activity Monitoring [Dataset]. 
+UCI Machine Learning Repository. 
+https://doi.org/10.24432/C5NW2H
