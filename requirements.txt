@@ -6,4 +6,5 @@ torch
 jupyter
 jupyterlab
 ipympl
+scikit-learn
 #pymatreader # used for Camargo dataset
