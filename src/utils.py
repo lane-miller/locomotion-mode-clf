@@ -134,9 +134,11 @@ def preprocess(df, accel_cols, gyro_cols, fc=15, fs=100, order=4, norm_percentil
         # Low-pass filter per activity segment to avoid boundary artifacts
         for activity_id in subj['activity_id'].unique():
             mask = subj['activity_id'] == activity_id
+            if mask.sum() <= 15:  # skip segments too short for sosfiltfilt padding
+                continue
             subj.loc[mask, signal_cols] = sosfiltfilt(
                 sos, subj.loc[mask, signal_cols].values, axis=0
-            )
+    )
 
         # DC removal per activity segment
         for activity_id in subj['activity_id'].unique():
